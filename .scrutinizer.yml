@@ -19,13 +19,8 @@ build:
                 file: 'coverage.clover'
                 format: 'php-clover'
 
-checks:
-# cannot run PHP Analyzer with current composer version
-    php: false
-#        code_rating: true
-#        duplication: true
-
 tools:
+    php_analyzer: false
     php_mess_detector:
         filter:
             excluded_paths:

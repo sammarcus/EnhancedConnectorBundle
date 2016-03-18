@@ -18,10 +18,12 @@ build:
             coverage:
                 file: 'coverage.clover'
                 format: 'php-clover'
-checks:
-    php:
-        code_rating: true
-        duplication: true
+
+#checks:
+# cannot run PHP Analyzer with current composer version
+#    php:
+#        code_rating: true
+#        duplication: true
 
 tools:
     php_mess_detector:
@@ -30,12 +32,6 @@ tools:
                 - bin/*
                 - spec/*
                 - vendor/*
-    php_analyzer: false
-#        filter:
-#            excluded_paths:
-#                - bin/*
-#                - spec/*
-#                - vendor/*
     php_code_sniffer:
         config:
             standard: PSR2

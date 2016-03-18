@@ -19,6 +19,11 @@ build:
                 file: 'coverage.clover'
                 format: 'php-clover'
 
+checks:
+    dependencies:
+        before:
+            - composer self-update
+
 tools:
     php_mess_detector:
         filter:

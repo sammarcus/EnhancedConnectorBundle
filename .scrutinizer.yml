@@ -19,11 +19,6 @@ build:
                 file: 'coverage.clover'
                 format: 'php-clover'
 
-checks:
-    dependencies:
-        before:
-            - composer self-update
-
 tools:
     php_mess_detector:
         filter:
@@ -31,12 +26,12 @@ tools:
                 - bin/*
                 - spec/*
                 - vendor/*
-    php_analyzer:
-        filter:
-            excluded_paths:
-                - bin/*
-                - spec/*
-                - vendor/*
+    php_analyzer: false
+#        filter:
+#            excluded_paths:
+#                - bin/*
+#                - spec/*
+#                - vendor/*
     php_code_sniffer:
         config:
             standard: PSR2
